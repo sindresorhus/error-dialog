@@ -1,0 +1,44 @@
+{
+  "name": "error-dialog",
+  "version": "0.0.0",
+  "description": "Display an error in a GUI dialog",
+  "license": "MIT",
+  "repository": "sindresorhus/error-dialog",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "error",
+    "dialog",
+    "err",
+    "exception",
+    "prompt",
+    "window",
+    "box",
+    "gui",
+    "util",
+    "utility",
+    "macos",
+    "applescript",
+    "osascript"
+  ],
+  "dependencies": {
+    "escape-string-applescript": "^1.0.0",
+    "run-applescript": "^3.0.0"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "xo": "*"
+  }
+}
