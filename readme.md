@@ -1,4 +1,4 @@
-# error-dialog [![Build Status](https://travis-ci.org/sindresorhus/error-dialog.svg?branch=master)](https://travis-ci.org/sindresorhus/error-dialog)
+# error-dialog
 
 > Display an error in a GUI dialog
 
