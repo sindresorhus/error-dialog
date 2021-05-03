@@ -1,12 +1,12 @@
 import test from 'ava';
-import m from './';
+import errorDialog from './index.js';
 
-test(t => {
+test('main', async t => {
 	if (process.env.CI) {
 		t.pass();
 		return;
 	}
 
-	t.notThrows(m(new Error('test')));
+	await t.notThrowsAsync(errorDialog(new Error('test')));
 });
 

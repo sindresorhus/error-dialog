@@ -1,12 +1,11 @@
-'use strict';
-const runApplescript = require('run-applescript');
-const escapeString = require('escape-string-applescript');
+import {runAppleScriptAsync} from 'run-applescript';
+import escapeString from 'escape-string-applescript';
 
 const icon = '/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/AlertStopIcon.icns';
 
-module.exports = (err, title) => {
-	err = escapeString(err.stack || err);
+export default async function errorDialog(error, title) {
+	error = escapeString(error.stack || error);
 	title = title ? `with title "${escapeString(title)}"` : '';
 
-	return runApplescript(`display dialog "${err}" ${title} with icon POSIX file "${icon}" buttons {"OK"}`);
-};
+	await runAppleScriptAsync(`display dialog "${error}" ${title} with icon POSIX file "${icon}" buttons {"OK"}`);
+}

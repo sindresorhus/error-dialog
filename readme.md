@@ -6,46 +6,38 @@
 
 macOS only, but pull request welcome for Linux and Windows support.
 
-
 ## Install
 
 ```
-$ npm install --save error-dialog
+$ npm install error-dialog
 ```
-
 
 ## Usage
 
 ```js
-const errorDialog = require('error-dialog');
+import errorDialog from 'error-dialog';
+
 const error = new Error('Expected more unicorns!');
 
-errorDialog(error, '🦄');
+await errorDialog(error, '🦄');
 ```
-
 
 ## API
 
-### errorDialog(error, [windowTitle])
+### errorDialog(error, windowTitle?)
 
 Returns a `Promise`.
 
 #### error
 
-Type: `Error` `string`
+Type: `Error | string`
 
-Error object or message.
+An error or error message.
 
 #### windowTitle
 
 Type: `string`
 
-
 ## Related
 
 - [cocoa-dialog](https://github.com/sindresorhus/cocoa-dialog) - Display common GUI dialogs on macOS
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)
